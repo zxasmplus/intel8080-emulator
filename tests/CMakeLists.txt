@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.10)
 
 add_executable(i8080emu emu.cpp keyintr.cpp main.cpp)
 target_include_directories(i8080emu PRIVATE cxxopts/include ${CMAKE_CURRENT_SOURCE_DIR})

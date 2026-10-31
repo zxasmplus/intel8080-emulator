@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.10)
 project(i8080emu)
 
 option(LIBI8080_TEST "Enable tests." OFF)

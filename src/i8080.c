@@ -817,9 +817,11 @@ static const char* OPARGS_TO_STR[] = {
 int i8080_disassemble(struct i8080* const cpu, FILE* os)
 {
     i8080_word_t opcode = read_word_adv(cpu);
+#if I8080_WORD_T_MAX > WORD_MAX
     if (opcode > WORD_MAX) {
         return i8080_EOPCODE;
     }
+#endif
     const char* opname = OP_TO_STR[opcode];
     const char* opargs = OPARGS_TO_STR[opcode];
 
